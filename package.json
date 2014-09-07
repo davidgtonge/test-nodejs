@@ -1,0 +1,27 @@
+{
+  "name": "yw-mhc-api",
+  "version": "0.0.1",
+  "description": "MHC API Server",
+  "scripts": {
+    "start": "node start.js",
+    "bamboo-prepare": "export PATH=/opt/node-0.10/bin:$PATH && npm install",
+    "bamboo-test": "JUNIT_REPORT_PATH=test_reports/report.xml ./node_modules/.bin/mocha --reporter mocha-jenkins-reporter || true"
+  },
+  "author": "",
+  "engines": {
+    "node": ">=0.8.18 <0.10.30"
+  },
+  "license": "BSD",
+  "dependencies": {
+    "fluent-async": "^0.8.2",
+    "coffee-script": "^1.8.0",
+    "express": "^4.8.8",
+    "helmet": "^0.4.1",
+    "body-parser": "^1.8.0"
+  },
+  "devDependencies": {
+    "mocha-jenkins-reporter": "^0.1.0",
+    "mocha": "~1.13.0",
+    "supertest": "^0.13.0"
+  }
+}
