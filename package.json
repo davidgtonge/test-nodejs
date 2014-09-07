@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "MHC API Server",
   "scripts": {
-    "start": "node start.js",
+    "start": "node_modules/forever/bin/forever start start.js",
     "bamboo-prepare": "export PATH=/opt/node-0.10/bin:$PATH && npm install",
     "bamboo-test": "JUNIT_REPORT_PATH=test_reports/report.xml ./node_modules/.bin/mocha --reporter mocha-jenkins-reporter || true"
   },
@@ -17,7 +17,8 @@
     "coffee-script": "^1.8.0",
     "express": "^4.8.8",
     "helmet": "^0.4.1",
-    "body-parser": "^1.8.0"
+    "body-parser": "^1.8.0",
+    "forever": "^0.11.1"
   },
   "devDependencies": {
     "mocha-jenkins-reporter": "^0.1.0",
